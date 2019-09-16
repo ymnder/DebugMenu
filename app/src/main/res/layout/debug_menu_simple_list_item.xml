@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <data>
+        <variable
+            name="item"
+            type="com.ymnd.android.debug.DebugMenuListItem.SimpleListItem"
+            />
+    </data>
+
+    <RelativeLayout
+        style="@style/material_design_list_item_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?android:attr/listPreferredItemHeight"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/material_design_list_large_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{item.title}"
+            android:textIsSelectable="true"
+            tools:text="日本酒"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/material_design_list_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:text="@{item.description}"
+            android:textAppearance="?attr/textAppearanceListItemSecondary"
+            android:textIsSelectable="true"
+            tools:text="すごくおいしい"
+            />
+
+    </RelativeLayout>
+
+</layout>
